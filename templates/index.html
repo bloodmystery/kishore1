@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<script src="{% static 'js/login.js' %}"></script>
+
+</head>
+
+<body>
+  
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-hea/blind.htmlder">
+                <a class="navbar-brand" href="" name="home">Learning</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="" >Home</a></li>
+                <li><a href="blind" >Blind</a></li>
+                <li><a href="deaf" >Deaf</a></li>
+                <li><a href="paralyzed" >Paralyzed</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" onclick="document.getElementById('id02').style.display='block'"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#" onclick="document.getElementById('id01').style.display='block'"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="id01" class="modal" >
+  
+        <form class="modal-content animate" method="post" action="login" name="login">
+          {% csrf_token %}
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="{% static 'images/logo.jpeg' %}" alt="Avatar" class="avatar" width="10px">
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button type="submit" Value="Submit" >Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw"><a href="#">Forgot password?</a></span>
+          </div>
+        </form>
+    </div>
+
+    <div id="id02" class="modal">
+      
+      <form class="modal-content animate" method="post" action="signup" name="signup">
+        {% csrf_token %}
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <img src="{% static 'images/logo.jpeg' %}" alt="Avatar" class="avatar" width="10px">
+        </div>
+    
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+            
+          <label for="drop-down">Disability</label>
+          <select name="disability" required>
+            <option value="blind">Blind</option>
+            <option value="deaf">Deaf</option>
+            <option value="paralyzed">Paralyzed</option>
+          </select> 
+
+          <button type="submit" Value="Submit" name="signup">Sign Up</button>
+          
+        </div>
+    
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+      </body>
+      </html>
+      
+
+    
+</body>
+</html>
