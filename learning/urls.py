@@ -26,4 +26,6 @@ urlpatterns = [
     path('paralyzed',views.paralyzed,name="paralyzed"),
     path('signup',views.signup,name="signup"),
     path('login',views.login,name="login"),
+    path('slb',views.slb,name="slb"),
+    path('flb',views.flb,name="flb"),
 ]
