@@ -65,4 +65,34 @@ def slb(request):
 
 def flb(request):
     return render(request,"flb.html")
-   
+
+def slb1(request):
+    return render(request,"slb1.html")
+
+def flb1(request):
+    return render(request,"flb1.html")
+
+def sld(request):
+    return render(request,"sld.html")
+
+def fld(request):
+    return render(request,"fld.html")
+
+def sld1(request):
+    return render(request,"sld1.html")
+
+def fld1(request):
+    return render(request,"fld1.html")
+
+def slp(request):
+    return render(request,"slp.html")
+
+def flp(request):
+    return render(request,"flp.html")
+
+def slp1(request):
+    return render(request,"slp1.html")
+
+def flp1(request):
+    return render(request,"flp1.html")
+
