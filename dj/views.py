@@ -59,5 +59,10 @@ def deaf(request):
 
 def paralyzed(request):
     return render(request,"paralyzed.html")
-    
-    
+
+def slb(request):
+    return render(request,"slb.html")
+
+def flb(request):
+    return render(request,"flb.html")
+   
